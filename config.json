@@ -1,0 +1,163 @@
+{
+    "prefix": "$",
+    "description": "Bot od ekonomii dla Ligi Pisarzy",
+    "currency_symbol": "<:alfomoment:979486652848287795>",
+    "json_updated": "Zaktualizowano users.json.",
+    "girl_role": 1068235098522132631,
+    "number_error_reply": "Jestem na to odporny, głupiutki. Podaj liczbę lepiej.",
+    "cooldowns": {
+        "work": 30,
+        "crime": 30,
+        "slut": 30,
+        "number_game": 1200
+    },
+    "work": {
+        "range": [1, 100],
+        "replies": [
+            "Przez niezliczoną liczbę godzin słuchał{gender[0]}ś opowieści ultrona64 o TNO i Warhammerze40k. W zamian podarował ci {amount}.",
+            "Przeczytałe{gender[0]}ś nową część powieści od innych Ligowców. Trzymaj {amount}.",
+            "Wcielił{gender[0]}ś się w minionka, populacja Bośni zmniejsza się a w twoim portfelu pojawia się {}.",
+            "Za zebrane czereśnie otrzymał{gender[0]}ś {amount}.",
+            "Odkrył{gender[0]}ś Teorię Wszystkiego, a pieniądze z nagród wyniosły {amount}.",
+            "Obalił{gender[0]}ś reżim użytkownika IgiPolski i lud obdarował cię {amount}.",
+            "Jako Pacyfikator Wolności udawał{gender[0]}ś ciężką pracę i zarobił{gender[0]}ś {amount}.",
+            "Przepracował{gender[0]}ś w sklepie sprzedając pyszniutkie dania z Alfika7 i dostał{gender[0]}ś za cały dzień {amount}",
+            "W nagrodę za zbanowanie za niewinność 69 dobrych chłopaków, Alfa odznaczył Cię stypendium w wysokości {amount}.",
+            "Kury obrodziły w jajka i przyniosły zysk równy {amount}.",
+            "Zakładając konto na Jeja otrzymał{gender[0]}ś łapówkę w wysokości {amount} od BB.",
+            "Założył{gender[0]}ś studio gier z Mezeonem i zarobiliście {amount}.",
+            "Wyprodukował{gender[0]}ś nasienie w ilości zdatnej do wyżywienia całej społeczności, w nagrodę masz {amount}.",
+            "Czyścił{gender[0]}ś prywatny kibel Alfy7 i dostał{gender[0]}ś {amount}.",
+            "Sprzedał{gender[0]}ś dziecko na wolnym rynku i zarobił{gender[0]}ś {amount} z zerowym podatkiem.",
+            "Zainwestował{gender[0]}ś w mieszkania na przedmieściach Warszawy i zyskał{gender[0]}ś {amount}.",
+            "Trollował{gender[0]}ś niewinnych niczemu Ligowców ze Szfindolem i ten dał ci {amount}.",
+            "Napisał{gender[0]}ś shipa z dwoma Ligowcami. Jego Uszatość nagrodziła cię pieniędzmi w wysokości {amount}.",
+            "Sprzedał{gender[0]}ś dzieciakom spod podstawówki monke podszytą pod mefe za {amount}.",
+            "Wcielił{gender[0]}ś się w Jurija Owsienko i zarobił{gender[0]}ś {amount}.",
+            "Znalazł{gender[0]}ś się w kasynie, a ktoś w ruletce wygrał 400 tysięcy. Musisz się dołożyć do puli na wygrane {amount}.",
+            "Rozstrzeliwał{gender[0]}ś osadzonych w Żałownicy i dostał{gender[0]}ś {amount} wypłaty."
+        ],
+        "cooldown": "Zmęczył{gender[0]}ś się. Będziesz wypoczęt{gender[2]} za {time} s."
+    },
+    "crime": {
+        "range_p": [1, 200],
+        "range_f": [1, 200],
+        
+        "replies_p": [
+            "Napadł{gender[0]}ś na kasyno w którym piotrkacz przepierdolił za jednym razem 80 tysięcy, w twojej kieszeni ląduje {amount} Alfonsów.",
+            "Sprzedał{gender[0]}ś marihunaen za {amount}. A na co to komu? A po co?",
+            "Dodrukował{gender[0]}ś pieniędzy w ilości {amount}.",
+            "Z powodzeniem okradł{gender[0]}ś starszą, schorowaną babcię metodą na wnuczka, wyłudzając {amount}. Jak jesteś godzien, człowieku?!",
+            "Ukradł{gender[0]}ś węgiel i sprzedał{gender[0]}ś go za {amount}.",
+            "Jesteś politykiem, któr{gender[2]} dał{gender[4]} się skorumpować za {amount}. Teraz przez ciebie zamiast szpitala onkologicznego wybudują wielki pomnik na cześć Wielkiego Zajonca. Niech żyje Liga!",
+            "Ukradł{gender[0]}ś katalizator z jakiegoś samochodu na HPC i sprzedał{gender[0]}ś go za {amount}.",
+            "Z sukcesem sprzedał{gender[0]}ś nieswoją nerkę na czarnym rynku za {amount}.",
+            "Ukradł{gender[0]}ś dziecku cukierka i sprzedał{gender[0]}ś go za {amount}.",
+            "Ukradł{gender[0]}ś trzy tony marchwi i sprzedał{gender[0]}ś je Alfie7. Zapłacił ci za nie {amount}."
+        ],
+        "replies_f": [
+            "Pobiegł{gender[0]}ś, a właściwie doczołgał{gender[0]}ś się do losowej osoby i poprosił{gender[0]}ś o siadanie na twoją twarz. Dostajesz jednak gazem i kopniaka, przez co wypada ci {amount} zębów.",
+            "Próbował{gender[0]}ś uniknąć dobrowolnej obowiązkowej służby wojskowej jako chwalebny żołnierz Ligi, więc znajdujesz się na liście poszukiwanych, ale przekupujesz panów milicjantów, że jesteś UwU dziewczyną za {amount}.",
+            "Przewrócił{gender[0]}ś się i sobie głupi ryj rozwalił{gender[0]}ś, wypadło ci przy tym {amount}.",
+            "Ukradł{gender[0]}ś antymaterię, która zanihilowała się ze zwykłą materią i wyrządziła szkód na {amount}.",
+            "Chciał{gender[0]}ś okraść przypadkowego przechodnia, ale okazał się on być Chuckiem Norrisem i to on okradł ciebie na {amount}.",
+            "Zostałeś przyłapan{gender[2]} na igniszeniu szczura w miejscu publicznym i dostał{gender[0]}ś mandat w wysokości {amount}.",
+            "Osiedlowy monitoring zgłosił cię na policję i dostał{gender[0]}ś mandat w wysokości {amount}.",
+            "Podczas ucieczki Aleją Solidarności zderzył{gender[0]}ś się z tramwajem, a łup w wysokości {amount} wpadł do studzienki.",
+            "Nie przewidział{gender[0]}ś, że twój cel to wielbiciel jadowitych pająków. {amount} poszło na leczenie ukąszeń.",
+            "Ukradł{gender[0]}ś jednego Bitcoina, który nagle stracił na wartości i zbiedniał{gender[0]}ś przez to o {amount}.",
+            "Ukradł{gender[0]}ś jakąś ampułkę. Okazała się ona zawierać uran, przez co dostał{gender[0]}ś choroby popromiennej, a koszty leczenia i mandatów za posiadanie niebezpiecznych substancji wyniosły {amount}.",
+            "Uciekając z miejsca zdarzenia, zderzył{gender[0]}ś się z latarnią uliczną, a {amount} wpadło do rzeki.",
+            "Ukradł{gender[0]}ś z targu marchew, ale Alfa cię spotkał i wymierzył mandat administracyjny w wysokości {amount}.",
+            "Uciekał{gender[0]}ś samochodem z łupem, ale przypadkiem wjechał{gender[0]}ś na Plac Rapackiego i zderzył{gender[0]}ś się z autobusem linii nr 27. Koszty przez ciebie poniesione wyniosły {amount}."
+        ],
+        "cooldown": "Policja jest zbyt blisko. Poczekaj jeszcze {time} s."
+    },
+    "slut": {
+        "range_f": [1, 300],
+        "cooldown": "Co za dużo, to nie zdrowo. Poczekaj jeszcze {time} s.",    
+        "range_p": [1, 300],
+        "replies_p": [
+            "Trafiłeś na trudnego klienta, ale jako że kiedyś wszyli ci dodatkowe {amount} penisów, dał ci napiwek w postaci HIV.",
+            "Stał{gender[0]}ś się najlepszą seksdziwką adminów, więc dali ci hojne {amont}.",
+            "Stworzył{gender[0]}ś gejowego shipa. Jakieś Yaoistki zaczęły więc się obmacywać, ale zainkasował{gender[0]}ś za tę usługę {amount}.",
+            "Porodówka nie jest dobrym miejscem na czerpanie korzyści z takich rzeczy, jednak noworodek i Alfa byli zachwyceni a więc otrzymujesz {amount}.",
+            "Włożył{gender[0]}ś fursuit i dzielnie dał{gender[0]}ś się przelecieć kilku osobom, zarabiając {amount}.",
+            "Alfa cię wyruchał i dostał{gender[0]}ś {amount}.",
+            "Bosak jest naprawdę przystojny... Dał ci {amount} za spędzenie z tobą nocy.",
+            "Został{gender[0]}ś wynajęt{gender[2]} jako femboy to towarzystwa, zgarniasz {amount}.",
+            "Twoje seks-taśmy ujrzały światło dzienne, więc tego dnia dostałeś więcej klientów. Zgarn[gender[1]}ł{gender[0]}ś {amount} i rzeżączkę.",
+            "Przebrał{gender[0]}ś się za Aragorna i spędził{gender[0]}ś długi, namiętny, pełny wrażeń, jęków i uścisków wieczór z Balladą o Wikingu, który dał ci w zamian {amount}.",
+            "Zrobił{gender[0]}ś Alfikowi loda i dał ci za to {amount}.",
+            "Ty i Hiteki napadliście sklep botaniczny. Nie pytaj o szczegóły, po prostu weź {amount}.",
+            "Alfa, za twe jakościowe usługi, obdarował cię {amount}."
+        ],
+        "replies_f": [
+            "Gadał{gender[0]}ś że nie wiadomo ile wytrzymasz w łózku a do{gender[3]} w 3 sekundy. Dostajesz więc po ryju, a twoje genitalia zostają wypalone kawałkiem rozżarzonego pręta i tracisz {amount}.",
+            "Był{gender[0]}ś przebrany za Asasyna, ale złapał cię Kapitalista. Musiał{gender[0]}ś zapłacić mu {amount} aby Ciebie wypuścił, ale i tak Cię przebrał za małą lolitkę i zgwałcił.",
+            "Słoik pękł. Tracisz {amount}.",
+            "Uprawiał{gender[0]}ś seks z koniem. Kopnął cię w splot słoneczny, a w błoto wypadło {amount}.",
+            "Ubrali cię w pas cnoty, ale kluczyka nie dali na powrót. Lekarz płakał ze śmiechu jak zdjemował i skasował cię na {amount}.",
+            "Zapinałeś Alfę, ale miało być na odwrót i straciłeś przez to {amount}.",
+            "Dildo było za duże. {amount} za operację zszycia odbytu.",
+            "Miał{gender[0]}ś wyruchać klienta, a tymczasem on wyruchał cię z pieniędzy. Pożegnaj się z {amount}.",
+            "Uprawiał{gender[0]}ś seks z BB. Czy ty masz rozum i godność człowieka? Poza tym, okradł cię na {amount}.",
+            "Państwo cię wyruchało z podatków i z godności. Tracisz {amount}.",
+            "Okazało się, że przedszkole nie jest odpowiednim miejscem do tego typu czynności. Tracisz {amount}, rozum i godność człowieka oraz zostajesz oficjalnie pedofilem.",
+            "Sprzedawał{gender[0]}ś usługi leczenia aseksualizmu swoim głosem. Niestety za dobrze ci poszło, więc klientowi odwaliło i zaczął uprawiać miłość z najbliższą ścianą, więc musiał{gender[0]}ś mu oddać {amount}.",
+            "Nie wziąłeś leków na impotencję. {amount} kary z agencji towarzyskiej.",
+            "Bozia patrzy. Nie pójdziesz do nieba, a w dodatku zdarzył się cud i zniknęło ci {amount}.",
+            "Twój klient stwierdził, że jesteś na to za star{gender[2]} i ukradł ci {amount} za nienależyte wykonanie usługi."
+        ]
+    },
+    "number_game": {
+        "range": 49,
+        "bets": 6,
+        "cost": 25,
+        "cooldown": "Totolotek się jeszcze nie zaczął. Poczekaj {time} s do następnego losowania.",
+        "payouts": {
+            "3": 240,
+            "4": 1000,
+            "5": 35000,
+            "6": 1000000
+        },
+        "won": "Trafił{gender[0]}ś {number} z {NUMBER_GAME_BETS} typowanych liczb. Wygrywasz {amount}!",
+        "numbers": "Wylosowane liczby to: {numbers}",
+        "lose": "Trafił{gender[0]}ś jedynie {number} z {NUMBER_GAME_BETS} typowanych liczb. Nie wygrał{gender[0]}ś nic!",
+        "wrong_bet": "Obstaw {NUMBER_GAME_BETS} liczb z zakresu od 1 do {NUMBER_GAME_RANGE}.",
+        "low_cash": "Nie masz wystarczająco dużo środków w portfelu, aby zagrać w Totolotka."
+    },
+    "wotd": {
+        "time": 0,
+        "channel": 1086695052476166255,
+        "role": 1088729374443978763
+    },
+    "deposit": {
+        "success": "Przelano {amount} na Twoje konto.",
+        "fail": "Użyj liczby naturalnej do określenia wysokości wpłaty.",
+        "low_cash": "Nie masz tyle środków w portfelu."
+    },
+    "withdraw": {
+        "withdraw_reply": "Wypłacono {amount} z Twojego konta."
+    },
+    "balance": {
+        "self": "Masz {cash} w portfelu i {bank} w banku, co daje łącznie {total}.",
+        "friend": "Ten Ligowiec ma {cash} w portfelu i {bank} w banku, co daje łącznie {total}."
+    },
+    "give": {
+        "error_self": "Do pracy, nierobie!",
+        "error_friend": "Nie ma kumoterstwa na Lidze i nie będzie!",
+        "success": "Ilość pieniędzy w banku {user} wynosi teraz {amount}."
+    },
+    "rob": {
+        "fail": "Nie udało ci się okraść {user}, a w dodatku dostał{gender[0]}ś mandat w wysokości {amount}."
+    },
+    "unregistred": {
+        "self": "Nie jesteś zarejestrowan{gender[2]}! Aby zmienić ten stan rzeczy, użyj komendy `$zarejestruj`.",
+        "friend": "Ten Ligowiec się jeszcze nie zarejestrował."
+    },
+    "registred": {
+        "reply": "Już jesteś zarejestrowan{gender[2]}.",
+        "success": "Zarejestrowano Cię poprawnie!"
+    }
+}
