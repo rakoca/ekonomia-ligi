@@ -9,7 +9,7 @@ class UpdateJson(commands.Cog):
     @commands.command(name = 'zaktualizuj_json')
     async def update_json(self, ctx):
         if ctx.message.author.top_role.permissions.administrator:
-            file = open('users.json', 'w')
+            file = open('./users.json', 'w')
             file.write(dumps(users))
             file.close()
             await ctx.send(JSON_UPDATED)

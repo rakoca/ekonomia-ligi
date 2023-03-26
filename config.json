@@ -142,7 +142,7 @@
     },
     "balance": {
         "self": "Masz {cash} w portfelu i {bank} w banku, co daje łącznie {total}.",
-        "friend": "Ten Ligowiec ma {cash} w portfelu i {bank} w banku, co daje łącznie {total}."
+        "friend": "Ten Czytelnik ma {cash} w portfelu i {bank} w banku, co daje łącznie {total}."
     },
     "give": {
         "error_self": "Do pracy, nierobie!",
