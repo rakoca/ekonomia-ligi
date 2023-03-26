@@ -1,5 +1,5 @@
 from variables import CURRENCY_SYMBOL, BALANCE as b, UNREGISTRED as u
-from essentials import get_user_by_id, get_user, determine_gender
+from essentials import  get_user, determine_gender
 from discord.ext import commands
 
 class Balance(commands.Cog):
@@ -9,11 +9,11 @@ class Balance(commands.Cog):
     @commands.command(name = 'majątek')
     async def balance(self, ctx, *user: str):
         if user:
-            if get_user_by_id(user):
+            if get_user(user):
                 await ctx.send(b['friend'].format(
-                    cash = CURRENCY_SYMBOL + str(get_user_by_id(user)['cash']),
-                    bank = CURRENCY_SYMBOL + str(get_user_by_id(user)['bank']),
-                    total = CURRENCY_SYMBOL + str(get_user_by_id(user)['cash'] + get_user_by_id(user)['bank'])
+                    cash = CURRENCY_SYMBOL + str(get_user(user)['cash']),
+                    bank = CURRENCY_SYMBOL + str(get_user(user)['bank']),
+                    total = CURRENCY_SYMBOL + str(get_user(user)['cash'] + get_user(user)['bank'])
                     )
                 )
             else: await ctx.send(u['friend'])

@@ -39,4 +39,6 @@ DEPOSIT = config.get('deposit')
 COOLDOWNS = config.get('cooldowns')
 ROB = config.get('rob')
 WOTD = config.get('wotd')
+WITHDRAW = config.get('withdraw')
+TRANSFER = config.get('transfer')
 config = None

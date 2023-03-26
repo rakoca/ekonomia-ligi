@@ -4,7 +4,7 @@
     "currency_symbol": "<:alfomoment:979486652848287795>",
     "json_updated": "Zaktualizowano users.json.",
     "girl_role": 1068235098522132631,
-    "number_error_reply": "Jestem na to odporny, głupiutki. Podaj liczbę lepiej.",
+    "number_error_reply": "Błąd: podaj liczbę nieujemną",
     "cooldowns": {
         "work": 30,
         "crime": 30,
@@ -134,11 +134,11 @@
     },
     "deposit": {
         "success": "Przelano {amount} na Twoje konto.",
-        "fail": "Użyj liczby naturalnej do określenia wysokości wpłaty.",
         "low_cash": "Nie masz tyle środków w portfelu."
     },
     "withdraw": {
-        "withdraw_reply": "Wypłacono {amount} z Twojego konta."
+        "success": "Wypłacono {amount} z Twojego konta.",
+        "low_bank": "Nie masz tyle pieniędzy na koncie."
     },
     "balance": {
         "self": "Masz {cash} w portfelu i {bank} w banku, co daje łącznie {total}.",
@@ -154,10 +154,14 @@
     },
     "unregistred": {
         "self": "Nie jesteś zarejestrowan{gender[2]}! Aby zmienić ten stan rzeczy, użyj komendy `$zarejestruj`.",
-        "friend": "Ten Ligowiec się jeszcze nie zarejestrował."
+        "friend": "Ten Czytelnik się jeszcze nie zarejestrował."
     },
     "registred": {
         "reply": "Już jesteś zarejestrowan{gender[2]}.",
         "success": "Zarejestrowano Cię poprawnie!"
+    },
+    "transfer": {
+        "low_bank": "Nie masz tyle pieniędzy na koncie.",
+        "success": "Przelano {amount} na konto {user}."
     }
 }

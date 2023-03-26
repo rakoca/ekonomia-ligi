@@ -2,11 +2,10 @@ from variables import users, COOLDOWNS, GIRL_ROLE
 from time import time
 
 def get_user(ctx) -> list:
-    return users.get(str(ctx.message.author.id))
+    try: return users.get(str(ctx.message.author.id))
+    except: return users.get(ctx[2:-1])
 def get_user_id(ctx) -> str:
     return str(ctx.message.author.id)
-def get_user_by_id(id):
-    return users.get(id[2:-1])
 def update_cash(ctx, amount) -> None:
     try: users[str(ctx.message.author.id)]['cash'] += int(amount)
     except: users[ctx[2:-1]]['cash'] += int(amount)
