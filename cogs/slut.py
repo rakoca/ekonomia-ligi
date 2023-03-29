@@ -11,13 +11,14 @@ class Slut(commands.Cog):
     async def slut(self, ctx):
         if get_user(ctx):
             if check_cooldown(ctx, 'slut'):
+                print(1)
                 if randint(0, 1):
                     reply = s['replies_p'][randint(0, len(s['replies_p']) - 1)]
                     amount = randint(s['range_p'][0], s['range_p'][1])
                     update_cash(ctx, amount)
                     await ctx.send(reply.format(gender = determine_gender(ctx), amount = CURRENCY_SYMBOL + str(amount)))
                 else:
-                    reply = s['repies_f'][randint(0, len(s['repies_f']) - 1)]
+                    reply = s['replies_f'][randint(0, len(s['replies_f']) - 1)]
                     amount = randint(s['range_f'][0], s['range_f'][1])
                     balance = get_user(ctx)['bank'] + get_user(ctx)['cash']
                     if balance < amount:

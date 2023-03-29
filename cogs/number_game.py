@@ -11,7 +11,7 @@ class NumberGame(commands.Cog):
     async def number_game(self, ctx, bet):
         if get_user(ctx):
             if check_cooldown(ctx, 'number_game'):
-                if (get_user(ctx)['balance'] < ng['cost']):
+                if (get_user(ctx)['cash'] < ng['cost']):
                     await ctx.send(ng['low_cash'].format(gender = determine_gender(ctx)))
                     return
                 else:

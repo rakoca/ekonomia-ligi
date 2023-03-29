@@ -12,7 +12,7 @@ class Crime(commands.Cog):
         if get_user(ctx):
             if check_cooldown(ctx, 'crime'):
                 if randint(0, 1):
-                    reply = c['replies_p'][randint(0, len(c['reples_p']) - 1)]
+                    reply = c['replies_p'][randint(0, len(c['replies_p']) - 1)]
                     amount = randint(c['range_p'][0], c['range_p'][1])
                     update_cash(ctx, amount)
                     await ctx.send(reply.format(gender = determine_gender(ctx), amount = CURRENCY_SYMBOL + str(amount)))
