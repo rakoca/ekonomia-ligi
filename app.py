@@ -24,4 +24,3 @@ async def main():
    token.close()
 
 asyncio.run(main())
-print('The bot has started!')

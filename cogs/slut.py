@@ -11,7 +11,6 @@ class Slut(commands.Cog):
     async def slut(self, ctx):
         if get_user(ctx):
             if check_cooldown(ctx, 'slut'):
-                print(1)
                 if randint(0, 1):
                     reply = s['replies_p'][randint(0, len(s['replies_p']) - 1)]
                     amount = randint(s['range_p'][0], s['range_p'][1])

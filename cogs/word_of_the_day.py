@@ -14,16 +14,16 @@ class Wotd(commands.Cog):
         req = get('https://sjp.pl/sl/los/')
         soup = BS(req.content, 'html.parser')
         word = '<@&' + str(w['role']) + '>\n'
-        word += '**' + req.url.split('/')[-1] + '**' + '\n'
-        soup = str(soup.find_all('p')[3])
-        soup = soup[74:-4]
+        word += '**' + str(soup.find_all('h1')[0].contents[0]) + '**' + '\n'
+        soup = str(soup.find_all('p')[3].contents[0])
         soup = soup.replace('<br/>', '\n')
         word += soup
         await channel.send(word)
-    
+
     @commands.Cog.listener()
     async def on_ready(self):
-        self.word_of_the_day.start()
+        await self.word_of_the_day.start()
 
+   
 async def setup(bot):
     await bot.add_cog(Wotd(bot))
