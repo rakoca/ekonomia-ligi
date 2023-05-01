@@ -1,4 +1,4 @@
-from variables import CURRENCY_SYMBOL, BALANCE as b, UNREGISTRED as u
+from variables import CURRENCY_SYMBOL, BALANCE as b, UNREGISTRED as u, COMMANDS as c
 from essentials import  get_user, determine_gender
 from discord.ext import commands
 
@@ -6,7 +6,7 @@ class Balance(commands.Cog):
     def __init__(self, bot) -> None:
         self.bot = bot
 
-    @commands.command(name = 'majątek')
+    @commands.command(name = c['balance'])
     async def balance(self, ctx, *user: str):
         if user:
             if get_user(user):

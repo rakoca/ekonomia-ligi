@@ -1,24 +1,24 @@
 from discord.ext import commands
-from variables import WOTD as w
+from variables import WOTD as w, COMMANDS as c
 from bs4 import BeautifulSoup as BS
 from requests import get
 
 class Wotd2(commands.Cog):
     def __init__(self, bot) -> None:
         self.bot = bot
+        self.word = None
+        self.soup = None
 
-    @commands.command(name = 'sd')
+    @commands.command(name = c['wotd'])
     async def wotd2(self, ctx):
         if ctx.message.author.top_role.permissions.administrator:
-            channel = self.bot.get_channel(w['channel'])
-            req = get('https://sjp.pl/sl/los/')
-            soup = BS(req.content, 'html.parser')
-            word = '<@&' + str(w['role']) + '>\n'
-            word += '**' + str(soup.find_all('h1')[0].contents[0]) + '**' + '\n'
-            soup = str(soup.find_all('p')[3].contents[0])
-            soup = soup.replace('<br/>', '\n')
-            word += soup
-            await channel.send(word)
+            self.soup = BS(get('https://sjp.pl/sl/los/').content, 'html.parser')
+            self.word = '<@&' + str(w['role']) + '>\n'
+            self.word += '**' + str(self.soup.find_all('h1')[0].contents[0]) + '**' + '\n'
+            self.soup = str(self.soup.find_all('p')[3].contents[0])
+            self.soup = self.soup.replace('<br/>', '\n')
+            self.word += self.soup
+            await self.bot.get_channel(w['channel']).send(self.word)
 
 async def setup(bot):
     await bot.add_cog(Wotd2(bot))

@@ -21,14 +21,15 @@ SCHEME = {
     'slut_cooldown': time(),
     'number_game_cooldown': time()
 }
+COMMANDS = config.get('commands')
 PREFIX = config.get('prefix')
-DESC = config.get('description')
+DESC = config.get('desc')
 CURRENCY_SYMBOL = config.get('currency_symbol')
 JSON_UPDATED = config.get('json_updated')
 GIRL_ROLE = config.get('girl_role')
+ERRORS = config.get('errors')
 UNREGISTRED = config.get('unregistred')
 REGISTRED  = config.get('registred')
-NUMBER_ERROR_REPLY = config.get('number_error_reply')
 GIVE = config.get('give')
 BALANCE = config.get('balance')
 WORK = config.get('work')
@@ -41,4 +42,5 @@ ROB = config.get('rob')
 WOTD = config.get('wotd')
 WITHDRAW = config.get('withdraw')
 TRANSFER = config.get('transfer')
+ITEMS = config.get('items')
 config = None

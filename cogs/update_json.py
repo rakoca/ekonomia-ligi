@@ -1,17 +1,18 @@
 from json import dumps
-from variables import users, JSON_UPDATED
+from variables import users, JSON_UPDATED, COMMANDS as c
 from discord.ext import commands
 
 class UpdateJson(commands.Cog):
     def __init__(self, bot) -> None:
         self.bot = bot
+        self.file = None
 
-    @commands.command(name = 'zaktualizuj_json')
+    @commands.command(name = c['update_json'])
     async def update_json(self, ctx):
         if ctx.message.author.top_role.permissions.administrator:
-            file = open('./users.json', 'w')
-            file.write(dumps(users))
-            file.close()
+            self.file = open('./users.json', 'w')
+            self.file.write(dumps(users))
+            self.file.close()
             await ctx.send(JSON_UPDATED)
 
 async def setup(bot):

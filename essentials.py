@@ -8,16 +8,16 @@ def get_user_id(ctx) -> str:
     return str(ctx.message.author.id)
 def update_cash(ctx, amount) -> None:
     try: users[str(ctx.message.author.id)]['cash'] += int(amount)
-    except: users[ctx[0][2:-1]]['cash'] += int(amount)
+    except: users[ctx[2:-1]]['cash'] += int(amount)
 def set_cash(ctx, amount) -> None:
     try: users[str(ctx.message.author.id)]['cash'] = int(amount)
-    except: users[ctx[0][2:-1]]['cash'] = int(amount)
+    except: users[ctx[2:-1]]['cash'] = int(amount)
 def update_bank(ctx, amount) -> None:
     try: users[str(ctx.message.author.id)]['bank'] += int(amount)
-    except: users[ctx[0][2:-1]]['bank'] += int(amount)
+    except: users[ctx[2:-1]]['bank'] += int(amount)
 def set_bank(ctx, amount) -> None:
     try: users[str(ctx.message.author.id)]['bank'] = int(amount)
-    except: users[ctx[0][2:-1]]['bank'] += int(amount)
+    except: users[ctx[2:-1]]['bank'] += int(amount)
 def reset_cooldown(ctx, type: str) -> None:
     users[str(ctx.message.author.id)][type + '_cooldown'] = time()
 def check_cooldown(ctx, type) -> bool:

@@ -1,10 +1,30 @@
 {
     "prefix": "$",
-    "description": "Bot od ekonomii dla Ligi Pisarzy",
+    "desc": "Bot od ekonomii dla Ligi Pisarzy",
     "currency_symbol": "<:alfomoment:979486652848287795>",
     "json_updated": "Zaktualizowano users.json.",
     "girl_role": 1068235098522132631,
-    "number_error_reply": "Błąd: podaj liczbę nieujemną",
+    "commands": {
+        "balance": "majątek",
+        "buy": "kup",
+        "crime": "kradnij",
+        "deposit": "wpłać",
+        "give": "daj_kasę",
+        "items_list": "przedmioty",
+        "number_game": "totolotek",
+        "register": "zarejestruj",
+        "slut": "daj_dupy",
+        "transfer": "przelej",
+        "update_json": "zaktualizuj_json",
+        "withdraw": "wypłać",
+        "work": "pracuj",
+        "wotd": "sd"
+    },
+    "errors": {
+        "number": "Sprawdź poprawność argumentów liczbowych.",
+        "low_cash": "Nie masz wystarczająco dużo środków w portfelu.",
+        "low_bank": "Nie masz tyle pieniędzy na koncie."
+    },
     "cooldowns": {
         "work": 30,
         "crime": 30,
@@ -113,7 +133,7 @@
     "number_game": {
         "range": 49,
         "bets": 6,
-        "cost": 25,
+        "price": 25,
         "cooldown": "Totolotek się jeszcze nie zaczął. Poczekaj {time} s do następnego losowania.",
         "payouts": {
             "3": 240,
@@ -124,8 +144,7 @@
         "won": "Trafił{gender[0]}ś {number} z {NUMBER_GAME_BETS} typowanych liczb. Wygrywasz {amount}!",
         "numbers": "Wylosowane liczby to: {numbers}",
         "lose": "Trafił{gender[0]}ś jedynie {number} z {NUMBER_GAME_BETS} typowanych liczb. Nie wygrał{gender[0]}ś nic!",
-        "wrong_bet": "Obstaw {NUMBER_GAME_BETS} liczb z zakresu od 1 do {NUMBER_GAME_RANGE}.",
-        "low_cash": "Nie masz wystarczająco dużo środków w portfelu, aby zagrać w Totolotka."
+        "wrong_bet": "Obstaw {NUMBER_GAME_BETS} liczb z zakresu od 1 do {NUMBER_GAME_RANGE}."
     },
     "wotd": {
         "time": 0,
@@ -133,12 +152,11 @@
         "role": 1088729374443978763
     },
     "deposit": {
-        "success": "Przelano {amount} na Twoje konto.",
-        "low_cash": "Nie masz tyle środków w portfelu."
+        "success": "Przelano {amount} na Twoje konto."
     },
     "withdraw": {
-        "success": "Wypłacono {amount} z Twojego konta.",
-        "low_bank": "Nie masz tyle pieniędzy na koncie."
+        "success": "Wypłacono {amount} z Twojego konta."
+        
     },
     "balance": {
         "self": "Masz {cash} w portfelu i {bank} w banku, co daje łącznie {total}.",
@@ -161,7 +179,21 @@
         "success": "Zarejestrowano Cię poprawnie!"
     },
     "transfer": {
-        "low_bank": "Nie masz tyle pieniędzy na koncie.",
         "success": "Przelano {amount} na konto {user}."
+    },
+    "items": {
+        "too_big_id": "Taki przedmiot nie istnieje.",
+        "items": [
+            {
+                "name": "Kolacja ze Szfindlem",
+                "desc": "Uświdacz kolacji ze znanym poetą i trollem Szfindolem",
+                "price": 1200000
+            },
+            {
+                "name": "Niezapominajka",
+                "desc": "Abyś nie zapomniał/a, że jesteś debilem",
+                "price": 5000
+            }
+        ]
     }
 }

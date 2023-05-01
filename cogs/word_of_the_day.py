@@ -7,18 +7,18 @@ from datetime import time as dtime
 class Wotd(commands.Cog):
     def __init__(self, bot) -> None:
         self.bot = bot
+        self.word = None
+        self.soup = None
         
     @tasks.loop(time = dtime(hour = w['time']))
     async def word_of_the_day(self):
-        channel = self.bot.get_channel(w['channel'])
-        req = get('https://sjp.pl/sl/los/')
-        soup = BS(req.content, 'html.parser')
-        word = '<@&' + str(w['role']) + '>\n'
-        word += '**' + str(soup.find_all('h1')[0].contents[0]) + '**' + '\n'
-        soup = str(soup.find_all('p')[3].contents[0])
-        soup = soup.replace('<br/>', '\n')
-        word += soup
-        await channel.send(word)
+        self.soup = BS(get('https://sjp.pl/sl/los/').content, 'html.parser')
+        self.word = '<@&' + str(w['role']) + '>\n'
+        self.word += '**' + str(self.soup.find_all('h1')[0].contents[0]) + '**' + '\n'
+        self.soup = str(self.soup.find_all('p')[3].contents[0])
+        self.soup = self.soup.replace('<br/>', '\n')
+        self.word += self.soup
+        await self.bot.get_channel(w['channel']).send(self.word)
 
     @commands.Cog.listener()
     async def on_ready(self):

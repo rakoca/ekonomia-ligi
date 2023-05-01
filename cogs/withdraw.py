@@ -1,33 +1,35 @@
-from variables import UNREGISTRED as u, WITHDRAW as w, NUMBER_ERROR_REPLY, CURRENCY_SYMBOL
+from variables import UNREGISTRED as u, WITHDRAW as w, ERRORS as e, CURRENCY_SYMBOL, COMMANDS as c
 from essentials import get_user, determine_gender, set_bank, update_cash, update_bank
 from discord.ext import commands
 
 class Withdraw(commands.Cog):
     def __init__(self, bot) -> None:
         self.bot = bot
+        self.bank = 0
+        self.amount = 0
 
-    @commands.command(name = 'wypłać')
+    @commands.command(name = c['withdraw'])
     async def withdraw(self, ctx, amount):
         if get_user(ctx):
-            bank = get_user(ctx)['bank']
+            self.bank = get_user(ctx)['bank']
             if amount == 'wszystko':
-                await ctx.send(w['success'].format(amount = CURRENCY_SYMBOL + str(bank)))
-                update_cash(ctx, bank)
+                await ctx.send(w['success'].format(amount = CURRENCY_SYMBOL + str(self.bank)))
+                update_cash(ctx, self.bank)
                 set_bank(ctx, 0)
             else:
                 try:
-                    amount = int(amount)
+                    self.amount = int(amount)
                 except:
-                    await ctx.send(NUMBER_ERROR_REPLY)
+                    await ctx.send(e['number'])
                     return
-                if amount < 0:
-                    await ctx.send(NUMBER_ERROR_REPLY)
-                elif amount > bank:
-                    await ctx.send(w['low_bank'])
+                if self.amount < 0:
+                    await ctx.send(e['number'])
+                elif self.amount > self.bank:
+                    await ctx.send(e['low_bank'])
                 else:
-                    update_bank(ctx, -amount)
-                    update_cash(ctx, amount)
-                    await ctx.send(w['success'].format(amount = CURRENCY_SYMBOL + str(amount)))
+                    update_bank(ctx, -self.amount)
+                    update_cash(ctx, self.amount)
+                    await ctx.send(w['success'].format(amount = CURRENCY_SYMBOL + str(self.amount)))
         else:
             await ctx.send(u['self'].format(gender = determine_gender(ctx)))
 
