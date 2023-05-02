@@ -16,6 +16,7 @@
         "slut": "daj_dupy",
         "transfer": "przelej",
         "update_json": "zaktualizuj_json",
+        "use": "użyj",
         "withdraw": "wypłać",
         "work": "pracuj",
         "wotd": "sd"
@@ -183,16 +184,27 @@
     },
     "items": {
         "too_big_id": "Taki przedmiot nie istnieje.",
+        "buy_success": "Kupił{gender[0]}ś **{name}** w ilości {amount}.",
+        "item_not_found": "Nie posiadasz tego przedmiotu.",
+        "blank_items_list": "Nie posiadasz żadnego przedmiotu.",
         "items": [
             {
                 "name": "Kolacja ze Szfindlem",
                 "desc": "Uświdacz kolacji ze znanym poetą i trollem Szfindolem",
-                "price": 1200000
+                "price": 1200000,
+                "action": "say Szfindol, kolacja czeka!"
             },
             {
                 "name": "Niezapominajka",
                 "desc": "Abyś nie zapomniał/a, że jesteś debilem",
-                "price": 5000
+                "price": 5000,
+                "action": "say Jesteś debilem.|say Ale i tak cię kocham uwu"
+            },
+            {
+                "name": "Zmień swój kolor",
+                "desc": "Nadaj życiu kolorów",
+                "price": 1000,
+                "action": "createrole name:{0} color:{0}|giverole author {0}|say Funkcja zostanie dodana już wkrótce."
             }
         ]
     }

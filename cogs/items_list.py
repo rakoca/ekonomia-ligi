@@ -12,8 +12,11 @@ class ItemsList(commands.Cog):
     async def items_list(self, ctx):
         if get_user(ctx):
             self.items = set(get_user(ctx)['items'])
+            if len(self.items) == 0:
+                await ctx.send(i['blank_items_list'])
+                return
             for n in self.items:
-                self.response += '**' + i['items'][n]['name'] + '** (x' + str(get_user(ctx)['items'].count(n)) +')\n' + i['items'][n]['desc'] + '\n\n'
+                self.response += '**' + i['items'][n]['name'] + '** (x' + str(get_user(ctx)['items'].count(n)) +') [' + str(n) +']\n' + i['items'][n]['desc'] + '\n\n'
             await ctx.send(self.response)
             self.response = ''
         else:
