@@ -15,8 +15,7 @@ class Wotd(commands.Cog):
         self.soup = BS(get('https://sjp.pl/sl/los/').content, 'html.parser')
         self.word = '<@&' + str(w['role']) + '>\n'
         self.word += '**' + str(self.soup.find_all('h1')[0].contents[0]) + '**' + '\n'
-        self.soup = str(self.soup.find_all('p')[3].contents[0])
-        self.soup = self.soup.replace('<br/>', '\n')
+        self.soup = str(self.soup.find_all('p')[3].contents).replace("['", '').replace("', <br/>, '", '\n').replace("']", '')
         self.word += self.soup
         await self.bot.get_channel(w['channel']).send(self.word)
 
