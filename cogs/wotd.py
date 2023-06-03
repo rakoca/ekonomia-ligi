@@ -16,7 +16,7 @@ class Wotd2(commands.Cog):
     async def wotd2(self, ctx):
         if ctx.message.author.top_role.permissions.administrator:
             self.file = open('wotd_custom', 'r')
-            self.wotd_custom = self.file.read().split('\n')
+            self.wotd_custom = self.file.read().split('|')
             self.file.close()
             if (self.wotd_custom[0] == ''):
                 self.soup = BS(get('https://sjp.pl/sl/los/').content, 'html.parser')
@@ -28,8 +28,8 @@ class Wotd2(commands.Cog):
                 self.file = open('wotd_custom', 'w')
                 self.content = ''
                 try: 
-                    for element in self.wotd_custom[1:-1]:
-                        self.content += element + '\n'
+                    for element in self.wotd_custom[1:]:
+                        self.content += element + '|'
                     self.file.write(self.content)
                 except:
                     pass
@@ -37,16 +37,19 @@ class Wotd2(commands.Cog):
                 self.wotd_custom = None
             else:
                 self.word = '<@&' + str(w['role']) + '>\n'
-                self.word += '**' + self.wotd_custom[0] + '**' + '\n'
-                self.word += self.wotd_custom[1]
+                self.word += '**' + self.wotd_custom[0] + '**'
+                self.wotd_custom[1] = self.wotd_custom[1].split('\n')
                 await self.bot.get_channel(w['channel']).send(self.word)
+                for element in self.wotd_custom[1]:
+                    await self.bot.get_channel(w['channel']).send(element)
                 self.file = open('wotd_custom', 'w')
                 self.content = ''
                 for element in self.wotd_custom[2:-1]:
-                    self.content += element + '\n'
+                    self.content += element + '|'
                 self.file.write(self.content)
                 self.file.close()
                 self.wotd_custom = None
+
 
 async def setup(bot):
     await bot.add_cog(Wotd2(bot))

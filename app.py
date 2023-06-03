@@ -19,7 +19,7 @@ async def load():
 
 async def main():
    await load()
-   token = open('token')
+   token = open('test_token')
    await bot.start(token.read())
    token.close()
 
