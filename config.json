@@ -1,9 +1,11 @@
 {
     "prefix": "$",
     "desc": "Bot od ekonomii dla Ligi Pisarzy",
+    "name": "SpawaczBot",
     "currency_symbol": "<:alfomoment:979486652848287795>",
     "json_updated": "Zaktualizowano users.json.",
     "girl_role": 1068235098522132631,
+    "quasi-admins": [],
     "commands": {
         "balance": "majątek",
         "buy": "kup",
@@ -19,13 +21,16 @@
         "use": "użyj",
         "withdraw": "wypłać",
         "work": "pracuj",
-        "wotd": "sd"
+        "wotd": "sd",
+        "pts": "pkt",
+        "pts_list": "lista_pkt"
     },
     "errors": {
         "number": "Sprawdź poprawność argumentów liczbowych.",
         "low_cash": "Nie masz wystarczająco dużo środków w portfelu.",
         "low_bank": "Nie masz tyle pieniędzy na koncie."
     },
+    "success": "Komendę wykonano poprawnie.",
     "cooldowns": {
         "work": 30,
         "crime": 30,
@@ -161,8 +166,8 @@
         
     },
     "balance": {
-        "self": "Masz {cash} w portfelu i {bank} w banku, co daje łącznie {total}.",
-        "friend": "Ten Czytelnik ma {cash} w portfelu i {bank} w banku, co daje łącznie {total}."
+        "self": "Masz {cash} w portfelu i {bank} w banku, co daje łącznie {total}. Posiadasz także {pts} pkt.",
+        "friend": "Ten Ligowiec ma {cash} w portfelu i {bank} w banku, co daje łącznie {total}. Posiada także {pts} pkt."
     },
     "give": {
         "error_self": "Do pracy, nierobie!",
@@ -174,7 +179,7 @@
     },
     "unregistred": {
         "self": "Nie jesteś zarejestrowan{gender[2]}! Aby zmienić ten stan rzeczy, użyj komendy `$zarejestruj`.",
-        "friend": "Ten Czytelnik się jeszcze nie zarejestrował."
+        "friend": "Ten Ligowiec się jeszcze nie zarejestrował."
     },
     "registred": {
         "reply": "Już jesteś zarejestrowan{gender[2]}.",
@@ -193,19 +198,19 @@
                 "name": "Kolacja ze Szfindlem",
                 "desc": "Uświdacz kolacji ze znanym poetą i trollem Szfindolem",
                 "price": 1200000,
-                "action": "say Szfindol, kolacja czeka!"
+                "command": "say Szfindol, kolacja czeka!"
             },
             {
                 "name": "Niezapominajka",
                 "desc": "Abyś nie zapomniał/a, że jesteś debilem",
                 "price": 5000,
-                "action": "say Jesteś debilem.|say Ale i tak cię kocham uwu"
+                "command": "say Jesteś debilem.|say Ale i tak cię kocham uwu"
             },
             {
                 "name": "Zmień swój kolor",
                 "desc": "Nadaj życiu kolorów",
                 "price": 1000,
-                "action": "createrole name:{0} color:{0}|giverole author {0}|say Funkcja zostanie dodana już wkrótce."
+                "command": "createrole color:0 name:0|giverole author|say Zmienił{gender[0]}ś sobie kolor prawidłowo."
             }
         ]
     }

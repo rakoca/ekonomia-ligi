@@ -15,12 +15,14 @@ file.close()
 SCHEME = {
     'cash': 0,
     'bank': 0,
+    'pts': 0,
     'items': [],
     'work_cooldown': time(),
     'crime_cooldown': time(),
     'slut_cooldown': time(),
     'number_game_cooldown': time()
 }
+NAME = config.get('name')
 COMMANDS = config.get('commands')
 PREFIX = config.get('prefix')
 DESC = config.get('desc')
@@ -43,4 +45,6 @@ WOTD = config.get('wotd')
 WITHDRAW = config.get('withdraw')
 TRANSFER = config.get('transfer')
 ITEMS = config.get('items')
+QUASIADMINS = config.get('quasi-admins')
+SUCCESS = config.get('success')
 config = None
